@@ -1,0 +1,15 @@
+import express from "express";
+import {
+  getMessages,
+  markAsRead,
+  deleteMessage,
+} from "../controllers/messageController.js";
+import { protect } from "../middleware/authMiddleware.js";
+
+const router = express.Router();
+
+router.get("/", protect, getMessages);
+router.put("/:id/read", protect, markAsRead);
+router.delete("/:id", protect, deleteMessage);
+
+export default router;
