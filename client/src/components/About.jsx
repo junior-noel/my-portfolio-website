@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Download, Code2, Server, Palette } from "lucide-react";
+import profile from "../assets/profile.png";
+
 
 const stats = [
   { label: "Projects Completed", value: "10+" },
@@ -43,7 +45,17 @@ const itemVariants = {
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-100px"});
+  const [expanded, setExpanded] = useState(false);
+
+  const aboutText =
+    "Fullstack developer from Cameroon 🇨🇲 who turns ideas into fast, beautiful web applications. I work across the entire stack and believe great software should be a pleasure to use.";
+
+  const maxChars = 100;
+  const isTruncated = aboutText.length > maxChars;
+  const displayedText = expanded
+    ? aboutText
+    : `${aboutText.slice(0, maxChars)}...`;
 
   return (
     <section id="about" ref={ref} className="py-24 bg-gray-50 dark:bg-gray-900">
@@ -59,7 +71,7 @@ const About = () => {
             variants={itemVariants}
             className="inline-block text-sm font-mono text-cyan-500 mb-3"
           >
-            // about me
+            {/* about me */}
           </motion.span>
           <motion.h2
             variants={itemVariants}
@@ -69,7 +81,7 @@ const About = () => {
           </motion.h2>
           <motion.div
             variants={itemVariants}
-            className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full"
+            className="w-16 h-1 bg-linear-to-r from-cyan-500 to-purple-500 mx-auto rounded-full"
           />
         </motion.div>
 
@@ -91,9 +103,9 @@ const About = () => {
 
             {/* Photo */}
             <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-gray-200 dark:border-gray-700">
-              {/* Replace src with your actual photo */}
+              {/* profile image*/}
               <img
-                src="/profile.jpg"
+                src={profile}
                 alt="Junior Noel"
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -123,23 +135,23 @@ const About = () => {
           </motion.div>
 
           {/* Right — Text */}
-          <motion.div variants={itemVariants} className="space-y-6">
+          <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
               Fullstack Developer based in{" "}
               <span className="text-cyan-500">Cameroon 🇨🇲</span>
             </h3>
             <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-              I'm a passionate fullstack developer who loves turning ideas into
-              real, impactful web applications. I enjoy working across the
-              entire stack — from crafting pixel-perfect UIs to designing robust
-              backend systems.
+              {displayedText}
             </p>
-            <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-              When I'm not coding, I'm learning new technologies, contributing
-              to open source, or exploring creative solutions to everyday
-              problems. I believe great software is not just functional — it's a
-              pleasure to use.
-            </p>
+            {isTruncated && (
+              <button
+                type="button"
+                onClick={() => setExpanded((prev) => !prev)}
+                className="text-sm font-semibold text-cyan-500 hover:text-cyan-400 transition-colors duration-200"
+              >
+                {expanded ? "See less" : "Reed more"}
+              </button>
+            )}
 
             {/* Highlights */}
             <div className="space-y-3 pt-2">

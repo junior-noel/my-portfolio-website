@@ -87,6 +87,9 @@ const Hero = () => {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
 
+      <div className="absolute top-1 left-1 w-96 h-96 bg-purple-500/10 rounded-full blur-1 pointer-events-none" />
+      <div className="absolute bottom-1 right-1 w-96 h-96  bg-cyan-500/10 rounded-full blur-1 pointer-events-none" />
+
       {/* Content */}
       <motion.div
         variants={containerVariants}
