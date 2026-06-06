@@ -111,7 +111,7 @@ const Services = () => {
           className="text-center mb-16"
         >
           <span className="inline-block text-sm font-mono text-cyan-500 mb-3">
-            // what i offer
+             {/* my services */}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             My Services

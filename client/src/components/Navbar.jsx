@@ -54,7 +54,7 @@ const Navbar = () => {
         </motion.a>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-8 ">
           {navLinks.map((link, i) => (
             <motion.li
               key={link.name}
@@ -99,7 +99,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-gray-600 dark:text-gray-300"
+            className="md:hidden p-2 text-gray-600 dark:text-gray-300 "
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -115,14 +115,14 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 px-6 pb-6"
+            className="md:hidden bg-purple-300/90 dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 px-6 pb-6 "
           >
             <ul className="flex flex-col gap-4 pt-4">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <button
                     onClick={() => handleNavClick(link.href)}
-                    className="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-200"
+                    className="text-base font-medium text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-200"
                   >
                     {link.name}
                   </button>
