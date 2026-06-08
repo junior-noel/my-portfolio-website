@@ -47,10 +47,10 @@ const techCategories = [
         name: "MongoDB",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
       },
-      {
-        name: "MySQL",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-      },
+      // {
+      //   name: "MySQL",
+      //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      // },
       {
         name: "Firebase",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
@@ -60,10 +60,10 @@ const techCategories = [
   {
     category: "Tools & Others",
     techs: [
-      {
-        name: "Git",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-      },
+      // {
+      //   name: "Git",
+      //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      // },
       {
         name: "GitHub",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
@@ -80,10 +80,10 @@ const techCategories = [
         name: "Postman",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
       },
-      {
-        name: "Linux",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-      },
+      // {
+      //   name: "Linux",
+      //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+      // },
     ],
   },
 ];
@@ -199,7 +199,7 @@ const TechStack = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center text-sm text-gray-400 dark:text-gray-600 mt-12 font-mono"
         >
-          {/* always learning new technologies 🚀 */}
+          always learning new technologies 🚀
         </motion.p>
       </div>
     </section>
