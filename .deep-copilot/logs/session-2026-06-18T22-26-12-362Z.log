@@ -1,0 +1,6 @@
+[2026-06-18T22:26:12.363Z] [INIT] Deep Copilot debug log started. file=c:\Users\The Eye Informatique\Desktop\my-portfolio-website\.deep-copilot\logs\session-2026-06-18T22-26-12-362Z.log
+[2026-06-18T22:26:12.363Z] [ACTIVATE] {"version":"0.43.1"}
+[2026-06-18T22:26:12.368Z] [PROVIDERS_LOADED] {"count":4,"ids":["anthropic","custom","deepseek","openai"]}
+[2026-06-18T22:26:12.369Z] [TERMINAL_MONITOR_STARTED] {}
+[2026-06-18T22:26:12.369Z] [STATUSBAR_REGISTERED] {"id":"deepseekAgent.statusBar"}
+[2026-06-18T22:26:12.374Z] [INLINE_COMPLETION_REGISTERED]
